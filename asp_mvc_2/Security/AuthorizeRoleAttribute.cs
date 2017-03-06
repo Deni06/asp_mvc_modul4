@@ -20,8 +20,7 @@ namespace Asp_mvc_2.Security
                 UserManager UM = new UserManager();
                 foreach (var roles in userAssignedRoles)
                 {
-                    authorize = UM.IsUserInRole(httpContext.User.Identity.Name,
-                    roles);
+                    authorize = UM.IsUserInRole(httpContext.User.Identity.Name, roles);
                     if (authorize)
                         return authorize;
                 }
